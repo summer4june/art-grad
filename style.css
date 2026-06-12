@@ -28,7 +28,7 @@
     --color-orange: #d14a28;
     --color-cream: #e8d0b3;
     --color-black: #050001;
-    --color-white: #ffffff;
+    --color-white: #F8F7F5;
     --font-display: 'PPEditorialNew', serif;
     --font-body: 'SuisseIntl', sans-serif;
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -60,6 +60,34 @@ body {
     will-change: transform;
 }
 
+#global-bg::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 2;
+}
+
+#global-bg::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: -10vw; 
+    width: 120vw; 
+    height: 100%;
+    background: radial-gradient(ellipse at 50% 70vh, rgba(255,100,40,.08), transparent 60%);
+    animation: moveLightX 25s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes moveLightX {
+    0% { transform: translateX(-5vw); }
+    50% { transform: translateX(5vw); }
+    100% { transform: translateX(-5vw); }
+}
+
 .theme-ember-horizon { background: linear-gradient(180deg, #12090D 0vh, #3B050A 28vh, #7A0710 52vh, #E01D16 82vh, #FF7B17 100vh); }
 .theme-burning-desert { background: linear-gradient(180deg, #0D070A 0vh, #2A0206 35vh, #5D020A 60vh, #C10A12 84vh, #FF5A0A 100vh); }
 .theme-red-eclipse { background: radial-gradient(circle at 50% 80vh, #FF2A17 0vh, #A4000F 30vh, #4D0007 55vh, #220003 80vh, #090506 100vh); }
@@ -67,6 +95,11 @@ body {
 .theme-solar-dust { background: linear-gradient(180deg, #0A090B 0vh, #251118 30vh, #5B1617 58vh, #E12C18 82vh, #FFA31A 100vh); }
 .theme-luxury-red { background: linear-gradient(135deg, #10070A 0vh, #220206 38vh, #4B0006 62vh, #8A0310 85vh, #D40E15 100vh); }
 .theme-molten-core { background: radial-gradient(circle at 50% 100vh, #FF8C22 0vh, #C1140F 25vh, #530007 55vh, #200004 80vh, #050505 100vh); }
+.theme-velvet-crimson { background: linear-gradient(180deg, #090405 0vh, #180608 38vh, #2D090C 62vh, #520C10 86vh, #6F1014 100vh); }
+.theme-molten-fabric { background: radial-gradient(circle at 50% 110vh, #A4121B 0vh, #7A0D15 30vh, #41090E 60vh, #1D0608 85vh, #090405 100vh); }
+.theme-red-horizon { background: linear-gradient(180deg, #070404 0vh, #140506 45vh, #2A080A 70vh, #5E0B0F 90vh, #B01014 100vh); }
+.theme-atmospheric-heat { background: linear-gradient(180deg, #0B0606 0vh, #170707 50vh, #2F090B 75vh, #690C11 92vh, #FF5C18 100vh); }
+.theme-artisun-red { background: linear-gradient(180deg, #080404 0vh, #150505 42vh, #310809 68vh, #670C0E 88vh, #B01217 100vh); }
 
 .theme-btn {
     position: fixed;

@@ -94,7 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
         { class: 'theme-crimson-atmosphere', name: 'Crimson Atmosphere' },
         { class: 'theme-solar-dust', name: 'Solar Dust' },
         { class: 'theme-luxury-red', name: 'Luxury Red' },
-        { class: 'theme-molten-core', name: 'Molten Core' }
+        { class: 'theme-molten-core', name: 'Molten Core' },
+        { class: 'theme-velvet-crimson', name: 'Velvet Crimson' },
+        { class: 'theme-molten-fabric', name: 'Molten Fabric' },
+        { class: 'theme-red-horizon', name: 'Red Horizon' },
+        { class: 'theme-atmospheric-heat', name: 'Atmospheric Heat' },
+        { class: 'theme-artisun-red', name: 'Artisun Red' }
     ];
     let currentThemeIndex = 0;
     const globalBg = document.getElementById('global-bg');
