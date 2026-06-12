@@ -276,25 +276,14 @@ h1, h2, .wordmark, .ghost-wordmark {
     align-items: center;
 }
 
-.artisun-title-3d {
-    font-family: var(--font-display);
-    font-size: clamp(4rem, 12vw, 10rem);
-    text-transform: uppercase;
-    letter-spacing: -0.02em;
-    font-weight: 400;
-    color: #ffb347; /* bright orange base */
-    text-shadow: 
-        0px 1px 0px #d97825,
-        0px 2px 0px #d97825,
-        0px 3px 0px #c25e1a,
-        0px 4px 0px #c25e1a,
-        0px 5px 0px #ab4611,
-        0px 6px 0px #ab4611,
-        0px 10px 20px rgba(0,0,0,0.5),
-        0px 20px 40px rgba(0,0,0,0.6);
+.hero-logo {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
     margin-bottom: 2rem;
     opacity: 0;
     transform: translateY(40px);
+    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.5));
 }
 
 .subtext-spaced {
@@ -341,7 +330,7 @@ h1, h2, .wordmark, .ghost-wordmark {
     transition: opacity 1.2s var(--ease-out-expo), transform 1.2s var(--ease-out-expo);
 }
 
-.hero-content .artisun-title-3d.show { transition-delay: 0.2s; }
+.hero-content .hero-logo.show { transition-delay: 0.2s; }
 .hero-content .subtext-spaced.show { transition-delay: 0.4s; }
 
 @keyframes fadeIn {
